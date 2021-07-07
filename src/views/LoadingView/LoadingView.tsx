@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 
 const LoadingView: React.FC = () => {
   return (
-    <Grid container justify="center">
+    <Grid container justifyContent="center">
       <div>Loading...</div>
     </Grid>
   );
