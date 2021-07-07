@@ -7,12 +7,19 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import { Todo } from '../../todosSlice';
 import TodoItem from '../TodoItem';
 
 const useStyles = makeStyles({
   table: {
     maxWidth: '100%',
+  },
+  tableHeader: {
+    backgroundColor: '#cccccc',
+  },
+  header: {
+    fontWeight: 'bold',
   },
 });
 
@@ -27,10 +34,22 @@ const Todos: React.FC<TodosProps> = ({ todos }) => {
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="todos-table">
         <TableHead>
-          <TableRow>
-            <TableCell align="left">#</TableCell>
-            <TableCell align="left">Title</TableCell>
-            <TableCell align="left">Completed</TableCell>
+          <TableRow className={classes.tableHeader}>
+            <TableCell align="left">
+              <Typography variant="subtitle1" className={classes.header}>
+                #
+              </Typography>
+            </TableCell>
+            <TableCell align="left">
+              <Typography variant="subtitle1" className={classes.header}>
+                Title
+              </Typography>
+            </TableCell>
+            <TableCell align="left">
+              <Typography variant="subtitle1" className={classes.header}>
+                Completed
+              </Typography>
+            </TableCell>
           </TableRow>
         </TableHead>
 
