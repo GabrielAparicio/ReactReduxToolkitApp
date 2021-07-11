@@ -1,4 +1,4 @@
-# Gabriel Coding Task
+# Frontend app
 
 To run the task just execute these commands:
 
